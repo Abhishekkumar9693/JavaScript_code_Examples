@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class car {
+        constructor(brand) {
+          this.carname = brand;
+        }
+        get cname() {
+          return this.carname;
+        }
+        set cname(x) {
+          return (this.carname = x);
+        }
+      }
+      const mycar = new car("fortuner");
+      console.log(mycar);
+    </script>
+  </body>
+</html>

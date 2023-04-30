@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function Abhishek() {
+        let delhiweather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("27 deg");
+          }, 2000);
+        });
+
+        let biharweather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("21 deg");
+          }, 5000);
+        });
+
+        // delhiweather.then(alert);
+        // biharweather.then(alert);
+        console.log("Fetching Delhi weather please wait..");
+        let delhiw = await delhiweather;
+        console.log("Fetching Delhi weather " + delhiw);
+        console.log("Fetching bihar weather please wait..");
+        let biharw = await biharwether;
+        console.log("Fetching bihar weather " + biharw);
+        return [delhiw, biharw];
+      }
+
+      console.log("welcome to weather control room");
+      let a = Abhishek();
+      a.then((value) => {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
